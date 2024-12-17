@@ -1,0 +1,36 @@
+/*Especificidad: 001*/  
+section{
+    width: 90%;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(12em, 20rem));
+    gap: 1em; 
+    justify-content: center;
+    margin: auto;
+
+    /*margin-bottom: 1em;*/
+}
+
+/*Especificidad: 003*/ 
+main > section > h3 {
+    grid-column: 1 / -1;
+    text-align: center; 
+}
+
+/*Especificidad: 002*/  
+section article{
+    max-width: 100%;
+    text-align: center;
+    background-color: #BDB6B6;
+
+    color: #000000;
+
+    border-radius: 1em;
+    border: 0.2em solid green;
+
+    padding: 1em;
+}
+/*Especificidad: 003*/  
+section article img{
+    width: 80%;
+    height: auto;
+}

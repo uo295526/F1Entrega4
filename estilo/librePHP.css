@@ -1,0 +1,56 @@
+/*Especificidad: 001*/  
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+/*Especificidad: 002*/  
+form label, 
+form input, 
+form button {
+    display: block;
+    width: 100%;
+    max-width: 30em;
+    margin: 0em auto;
+    font-size: 1em;
+}
+
+/*Especificidad: 002*/  
+form button {
+    cursor: pointer;
+    padding:  0.75em;
+    background-color: #2E7D32;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0.3em;
+}
+
+/*Especificidad: 012*/  
+form button:hover {
+    background-color: #1B5E20;
+    color: #FFFFFF;
+}
+
+/*Especificidad: 001*/  
+h3, h4{
+    text-align: center;
+}
+/*Especificidad: 001*/  
+ol, ul {
+    width: 50%;
+    margin: 2em auto;
+    text-align: center;
+    padding: 1em;
+    background-color: #f9f9f9;
+    color: #000000;
+    border-radius: 0.5em;
+}
+
+/*Especificidad: 002*/  
+ol li, ul li {
+    margin: 0.5em;
+    font-size: 1.2em;
+    list-style-position: inside;
+}

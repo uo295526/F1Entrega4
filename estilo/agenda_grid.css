@@ -1,0 +1,42 @@
+/*Especificidad: 001*/  
+section{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+    gap: 1em; 
+    justify-content: center;
+    margin: auto;
+}
+
+/*Especificidad: 002*/  
+section article{
+    max-width: 100%;
+    text-align: center;
+    color: #000000;
+    background-color: #FFFFFF;
+    border-radius: 1em; 
+    border: 0.2em solid green;
+
+    padding: 1em;
+}
+/*Especificidad: 002*/  
+section > h3 {
+    grid-column: 1 / -1;
+    text-align: center; 
+}
+
+/*Especificidad: 002*/  
+body button{
+    cursor: pointer;
+    border-radius: 0.5em;
+    margin-left: 2em;
+
+}
+/*Especificidad: 012*/  
+body button:hover {
+    background-color: #cecece;
+
+    color: #000000;
+}
+
+
