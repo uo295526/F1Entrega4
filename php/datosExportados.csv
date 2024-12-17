@@ -1,0 +1,50 @@
+Equipo
+1,"Aston Martin",1959
+2,"Red Bull Racing",1997
+3,Mercedes,1955
+4,Ferrari,1939
+
+Circuito
+1,"Circuito de Zandvoort","Paises Bajos",4.25,14
+2,Hockenheimring,Alemania,4.57,17
+3,"Circuit Barcelona",España,4.65,16
+4,"Hermanos Rodríguez",Mexico,4.30,17
+5,"Yas Marina Circuit",Abudabi,5.54,21
+6,"Silverstone Circuit",Inglaterra,5.89,18
+7,"Istanbul Park Circuit",Turquía,5.34,14
+8,"Bahrain Circuit",Baréin,5.41,15
+9,"Melbourne Circuit",Australia,5.30,16
+10,"Circuit de Monaco",Mónaco,3.34,19
+
+Piloto
+1,"Fernando Alonso",España,43,1
+2,"Max Verstappen",Bélgica,27,2
+3,"Lewis Hamilton",Inglaterra,39,3
+4,"Charles Leclerc",Mónaco,27,4
+
+Carrera
+1,"Gran Premio España",2013-01-01,70000,3
+2,"Gran Premio Alemania",2019-05-12,85000,2
+3,"Gran Premio Paises Bajos",2021-08-21,100000,1
+4,"Gran Premio Mexico",2019-11-04,250000,4
+5,"Gran Premio Abudabi",2021-03-24,60000,5
+6,"Gran Premio Gran Bretaña",2020-02-21,140000,6
+7,"Gran Premio Turquía",2020-06-15,0,7
+8,"Gran Premio Baréin",2021-09-08,13000,8
+9,"Gran Premio Baréin",2022-05-17,15000,8
+10,"Gran Premio Australia",2022-06-21,180000,9
+11,"Gran Premio Mónaco",2024-04-13,95000,10
+
+GanadorCarrera
+1,102.54,3,1
+2,120.84,2,2
+3,100.25,1,2
+4,98.13,4,2
+5,137.21,5,2
+6,164.95,6,3
+7,129.43,7,3
+8,130.03,8,3
+9,135.34,9,4
+10,124.55,10,4
+11,97.24,11,4
+
