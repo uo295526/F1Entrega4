@@ -1,0 +1,36 @@
+<!ELEMENT circuitos (circuito)>
+<!ELEMENT circuito (nombre, longitud, anchura, fechaInicio, horaInicio, numeroVueltas, localidad, pais, referencias, fotografias, videos, coordenadas, puntosTramos)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT longitud (#PCDATA)>
+<!ATTLIST longitud unidades CDATA #REQUIRED>
+<!ELEMENT anchura (#PCDATA)>
+<!ATTLIST anchura unidades CDATA #REQUIRED>
+<!ELEMENT fechaInicio (#PCDATA)>
+<!ELEMENT horaInicio (#PCDATA)>
+<!ELEMENT numeroVueltas (#PCDATA)>
+<!ELEMENT localidad (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>
+<!ELEMENT referencias (referencia)+>
+<!ELEMENT referencia (enlace)>
+<!ELEMENT fotografias (fotografia)+>
+<!ELEMENT videos (video)+>
+<!ELEMENT fotografia (enlace)>
+<!ATTLIST fotografia descripcion CDATA #IMPLIED>
+<!ELEMENT video (enlace)>
+<!ATTLIST video descripcion CDATA #IMPLIED>
+<!ELEMENT enlace (#PCDATA)>
+<!ELEMENT coordenadas (longitudCoordenadas, latitudCoordenadas, altitudCoordenadas)>
+<!ELEMENT longitudCoordenadas (#PCDATA)>
+<!ELEMENT latitudCoordenadas (#PCDATA)>
+<!ELEMENT altitudCoordenadas (#PCDATA)>
+<!ELEMENT puntosTramos (tramoActual)+>
+<!ELEMENT tramoActual (distanciaTramo, puntoFinalTramo, numSectorTramo)>
+<!ATTLIST tramoActual nombreTramo CDATA #REQUIRED>
+<!ELEMENT distanciaTramo (#PCDATA)>
+<!ATTLIST distanciaTramo unidades CDATA #REQUIRED>
+<!ELEMENT puntoFinalTramo (#PCDATA)>
+<!ATTLIST puntoFinalTramo nombrePuntoFinal CDATA #REQUIRED>
+<!ATTLIST puntoFinalTramo longitud CDATA #REQUIRED>
+<!ATTLIST puntoFinalTramo latitud CDATA #REQUIRED>
+<!ATTLIST puntoFinalTramo altitud CDATA #REQUIRED>
+<!ELEMENT numSectorTramo (#PCDATA)>

@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document><Placemark><name>
+1
+</name><description>
+Gerlachbocht
+</description><Point><coordinates>
+4.54283,52.38916,16.5509214
+</coordinates><altitudeMode>
+relativeToGround
+</altitudeMode></Point></Placemark><Placemark><name>
+2
+</name><description>
+Hugenholtzbocht 
+</description><Point><coordinates>
+4.54118,52.38836,15.945032
+</coordinates><altitudeMode>
+relativeToGround
+</altitudeMode></Point></Placemark><Placemark><name>
+3
+</name><description>
+Hunserug 
+</description><Point><coordinates>
+4.54414,52.3885,22.0771255
+</coordinates><altitudeMode>
+relativeToGround
+</altitudeMode></Point></Placemark><Placemark><name>
+4
+</name><description>
+Rob Slotemakerbocth
+</description><Point><coordinates>
+4.54635,52.388828,15.886671
+</coordinates><altitudeMode>
+relativeToGround
+</altitudeMode></Point></Placemark><Placemark><name>
+5
+</name><description>
+Bocht 6
+</description><Point><coordinates>
+4.54924,52.38895,22.0628285
+</coordinates><altitudeMode>
+relativeToGround
+</altitudeMode></Point></Placemark><Placemark><name>
+6
+</name><description>
+Scheivlak
+</description><Point><coordinates>
+4.5527,52.3886,17.3983142
+</coordinates><altitudeMode>
+relativeToGround
+</altitudeMode></Point></Placemark><Placemark><name>
+7
+</name><description>
+Masterbocht
+</description><Point><coordinates>
+4.55117,52.38579,15.5566243
+</coordinates><altitudeMode>
+relativeToGround
+</altitudeMode></Point></Placemark><Placemark><name>
+8
+</name><description>
+Bocht 9
+</description><Point><coordinates>
+4.54825,52.38651,16.2918884
+</coordinates><altitudeMode>
+relativeToGround
+</altitudeMode></Point></Placemark><Placemark><name>
+9
+</name><description>
+Bocht 10
+</description><Point><coordinates>
+4.55118,52.38765,15.8426112
+</coordinates><altitudeMode>
+relativeToGround
+</altitudeMode></Point></Placemark><Placemark><name>
+10
+</name><description>
+Hans Ernstbocht
+</description><Point><coordinates>
+4.54308,52.38714,15.3211318
+</coordinates><altitudeMode>
+relativeToGround
+</altitudeMode></Point></Placemark><Placemark><name>
+11
+</name><description>
+Hans Ernstbocht
+</description><Point><coordinates>
+4.54226,52.38744,14.9955985
+</coordinates><altitudeMode>
+relativeToGround
+</altitudeMode></Point></Placemark><Placemark><name>
+12
+</name><description>
+Bocht 13
+</description><Point><coordinates>
+4.54,52.38464,14.8534845
+</coordinates><altitudeMode>
+relativeToGround
+</altitudeMode></Point></Placemark><Placemark><name>
+13
+</name><description>
+Arie Luyendijkbocht
+</description><Point><coordinates>
+4.53878,52.38522,20.6430024
+</coordinates><altitudeMode>
+relativeToGround
+</altitudeMode></Point></Placemark><Placemark><name>
+14
+</name><description>
+Tarzanbocht
+</description><Point><coordinates>
+4.54341,52.3918,17.680657
+</coordinates><altitudeMode>
+relativeToGround
+</altitudeMode></Point></Placemark></Document></kml>

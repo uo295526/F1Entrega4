@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE circuito SYSTEM "circuito.dtd">
+<circuito>
+<nombre>Zandvoort</nombre>
+<longitud unidades="km">4'259 km</longitud>
+<anchura unidades="km">X km</anchura>
+<fechaInicio>2024-08-23</fechaInicio>
+<horaInicio>12:00:00</horaInicio>
+<numeroVueltas>72</numeroVueltas>
+<localidad>Holanda Septentrional</localidad>
+<pais>Paises Bajos</pais>
+<referencias>
+    <referencia>
+        <enlace>https://www.dazn.com/es-ES/news/motor/circuito-zandvoort-donde-esta-como-es-caracteristicas-como-llegar-fotos-escenario-gp-paises-bajos-mundial-f1/z4tfep6uuudo1fqpzfnrzconu</enlace>
+    </referencia>
+    <referencia>
+        <enlace>https://www.statsf1.com/es/circuit-zandvoort.aspx</enlace>
+    </referencia>
+    <referencia>
+        <enlace>https://www.redbull.com/pe-es/f1-circuito-zandvoort-lo-que-debes-saber</enlace>
+    </referencia>
+    <referencia>
+        <enlace>https://www.p1travel.com/es/blog/guia-definitiva-de-la-pista-como-vivir-el-gp-de-paises-bajos#curvas-famosas</enlace>
+    </referencia>
+</referencias>
+<fotografias>
+    <fotografia descripcion="Imagen del circuito">
+        <enlace>fotoCircuito.PNG</enlace>
+    </fotografia>
+</fotografias>
+<videos>
+    <video>
+        <enlace>fotoCircuito.PNG</enlace>
+    </video>
+</videos>
+<coordenadas>
+    <longitudCoordenadas>4.543011</longitudCoordenadas>
+    <latitudCoordenadas>52.388292</latitudCoordenadas>
+    <altitudCoordenadas>34.8970808</altitudCoordenadas>
+</coordenadas>
+<puntosTramos>
+    <tramoActual nombreTramo="Tarzanbocht-Gerlachbocht">
+        <distanciaTramo unidades="m">297.24</distanciaTramo>
+        <puntoFinalTramo nombrePuntoFinal="Gerlachbocht" longitud="4.54283" latitud="52.38916" altitud="16.5509214"></puntoFinalTramo>
+        <numSectorTramo>1</numSectorTramo>
+    </tramoActual>
+    <tramoActual nombreTramo="Gerlachbocht-Hugenholtzbocht">
+        <distanciaTramo unidades="m">110</distanciaTramo>
+        <puntoFinalTramo nombrePuntoFinal="Hugenholtzbocht " longitud="4.54118" latitud="52.38836" altitud="15.945032"></puntoFinalTramo>
+        <numSectorTramo>2</numSectorTramo>
+    </tramoActual>
+    <tramoActual nombreTramo="Hugenholtzbocht-Hunserug">
+        <distanciaTramo unidades="m">215</distanciaTramo>
+        <puntoFinalTramo nombrePuntoFinal="Hunserug " longitud="4.54414" latitud="52.3885" altitud="22.0771255"></puntoFinalTramo>
+        <numSectorTramo>3</numSectorTramo>
+    </tramoActual>
+    <tramoActual nombreTramo="Hunserug-Rob Slotemakerbocth">
+        <distanciaTramo unidades="m">155.95</distanciaTramo>
+        <puntoFinalTramo nombrePuntoFinal="Rob Slotemakerbocth" longitud="4.54635" latitud="52.388828" altitud="15.886671"></puntoFinalTramo>
+        <numSectorTramo>4</numSectorTramo>
+    </tramoActual>
+    <tramoActual nombreTramo="Rob Slotemakerbocth-Bocht 6">
+        <distanciaTramo unidades="m">187.5</distanciaTramo>
+        <puntoFinalTramo nombrePuntoFinal="Bocht 6" longitud="4.54924" latitud="52.38895" altitud="22.0628285"></puntoFinalTramo>
+        <numSectorTramo>5</numSectorTramo>
+    </tramoActual>
+    <tramoActual nombreTramo="Bocht 6-Scheivlak">
+        <distanciaTramo unidades="m">240.27</distanciaTramo>
+        <puntoFinalTramo nombrePuntoFinal="Scheivlak" longitud="4.55270" latitud="52.3886" altitud="17.3983142"></puntoFinalTramo>
+        <numSectorTramo>6</numSectorTramo>
+    </tramoActual>
+    <tramoActual nombreTramo="Scheivlak-Masterbocht">
+        <distanciaTramo unidades="m">305.73</distanciaTramo>
+        <puntoFinalTramo nombrePuntoFinal="Masterbocht" longitud="4.55117" latitud="52.38579" altitud="15.5566243"></puntoFinalTramo>
+        <numSectorTramo>7</numSectorTramo>
+    </tramoActual>
+    <tramoActual nombreTramo="Masterbocht-Bocht 9">
+        <distanciaTramo unidades="m">210.81</distanciaTramo>
+        <puntoFinalTramo nombrePuntoFinal="Bocht 9" longitud="4.54825" latitud="52.38651" altitud="16.2918884"></puntoFinalTramo>
+        <numSectorTramo>8</numSectorTramo>
+    </tramoActual>
+    <tramoActual nombreTramo="Bocht 9-Bocht 10">
+        <distanciaTramo unidades="m">223.94</distanciaTramo>
+        <puntoFinalTramo nombrePuntoFinal="Bocht 10" longitud="4.55118" latitud="52.38765" altitud="15.8426112"></puntoFinalTramo>
+        <numSectorTramo>9</numSectorTramo>
+    </tramoActual>
+    <tramoActual nombreTramo="Bocht 10-Hans Ernstbocht">
+        <distanciaTramo unidades="m">539.35</distanciaTramo>
+        <puntoFinalTramo nombrePuntoFinal="Hans Ernstbocht" longitud="4.54308" latitud="52.38714" altitud="15.3211318"></puntoFinalTramo>
+        <numSectorTramo>10</numSectorTramo>
+    </tramoActual>
+    <tramoActual nombreTramo="Hans Ernstbocht-Hans Ernstbocht">
+        <distanciaTramo unidades="m">70.43</distanciaTramo>
+        <puntoFinalTramo nombrePuntoFinal="Hans Ernstbocht" longitud="4.54226" latitud="52.38744" altitud="14.9955985"></puntoFinalTramo>
+        <numSectorTramo>11</numSectorTramo>
+    </tramoActual>
+    <tramoActual nombreTramo="Hans Ernstbocht-Bocht 13">
+        <distanciaTramo unidades="m">311.31</distanciaTramo>
+        <puntoFinalTramo nombrePuntoFinal="Bocht 13" longitud="4.54" latitud="52.38464" altitud="14.8534845"></puntoFinalTramo>
+        <numSectorTramo>12</numSectorTramo>
+    </tramoActual>
+    <tramoActual nombreTramo="Bocht 13-Arie Luyendijkbocht">
+        <distanciaTramo unidades="m">266.75</distanciaTramo>
+        <puntoFinalTramo nombrePuntoFinal="Arie Luyendijkbocht" longitud="4.53878" latitud="52.38522" altitud="20.6430024"></puntoFinalTramo>
+        <numSectorTramo>13</numSectorTramo>
+    </tramoActual>
+    <tramoActual nombreTramo="Arie Luyendijkbocht-Tarzanbocht">
+        <distanciaTramo unidades="m">775.47</distanciaTramo>
+        <puntoFinalTramo nombrePuntoFinal="Tarzanbocht" longitud="4.54341" latitud="52.3918" altitud="17.680657"></puntoFinalTramo>
+        <numSectorTramo>14</numSectorTramo>
+    </tramoActual>
+</puntosTramos>
+
+
+</circuito>
