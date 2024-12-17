@@ -212,11 +212,10 @@ class Trivia{
 
     handleDragStart(event) {
         event.dataTransfer.setData("text/plain", event.target.innerText);
-        event.target.classList.add("dragging");
     }
 
     handleDragEnd(event) {
-        event.target.classList.remove("dragging");
+        
     }
 
     handleDragOver(event) {
@@ -257,9 +256,6 @@ class Trivia{
         this.dragableActual = event.target; // Guardamos el elemento que está siendo arrastrado
         this.registroMovimientoTouchX = touch.clientX; // Coordenada inicial X
         this.registroMovimientoTouchY = touch.clientY; // Coordenada inicial Y
-
-        // Agregamos una clase visual para destacar el elemento arrastrado
-        this.dragableActual.classList.add("dragging");
     }
     
     handleTouchMove(event) {
@@ -267,8 +263,6 @@ class Trivia{
     }
     
     handleTouchEnd(event) {
-        this.dragableActual.classList.remove("dragging");
-
         const soltar = event.changedTouches[0];
         const articleRespestaEsc = document.elementFromPoint(soltar.clientX, soltar.clientY);
 
