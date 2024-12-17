@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+    <title>F1Desktop/Viajes</title>
+    <link href="multimedia/imagenes/favicon.ico" rel="icon" />
+    <meta name ="author" content="UO295526"/>
+    <meta name ="description" content ="Viajes" />
+    <meta name ="keywords" content ="HTML, CSS, JavaScript, PHP" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" /> <!--asi asociamos mas hojas de estilo-->
+
+    <script src="js/viajes.js"></script>
+    
+    <!---->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpjvnYhWbCL9HaKT239KRjgmAnf5_CEjU&loading=async"></script>
+</head>
+
+<body>
+    <!-- Datos con el contenidos que aparece en el navegador -->
+    <header>        <!--No confundir con head. Head es parte intrinseca del html y header la seccion de arriba de la pagina-->
+      <h1><a href="index.html" title="enlace al indice">F1Desktop</a></h1>
+      <nav>
+          <a href="index.html" title="enlace al indice">Index</a>  <!--importante el title por usabilidad-->
+          <a href="piloto.html" title="enlace a la pagina del piloto">Piloto</a> <!--lo "activamos" pues es enlace a la propia pagina-->
+          <a href="noticias.html" title="enlace a la pagina de noticias">Noticias</a>
+          <a href="calendario.html" title="enlace a la pagina del calendario">Calendario</a>
+          <a href="meteorologia.html" title="enlace a la pagina de meteorologia">Meteorologia</a>
+          <a href="circuito.html" title="enlace a la pagina de circuito">Circuito</a>
+          <a href="viajes.php" title="enlace a la pagina de viajes" class="active">Viajes</a>
+          <a href="juegos.html" title="enlace a la pagina de juegos">Juegos</a>
+      </nav>
+      <!--este h1 y nav, al ser comun de todas las paginas, lo metemos en un header comun de todas-->
+    </header>
+
+
+    
+    <p>Estás en: <a href="index.html" title="enlace al indice">Inicio</a> >> Viajes</p> <!--migas entre header y main, pues va a ser algo identico en el resto de html-->
+
+    <main>
+
+    <h2>Viajes</h2>
+    
+    <p>Sírvete de esta página para hacer de tus futuros viajes la mejor experiencia posible. ¡Bon voyage!</p>
+    <section>
+        <h3>Información del destino del viaje: Ámsterdam, Países Bajos</h3> <!--puedo meter el h4 dentro: section>h4+article o similar-->
+        <article><h3>Carrusel de imágenes</h3><img alt='_KJM0138_20241215_172359' src='https://live.staticflickr.com/65535/54209531807_fdbf63e847_m.jpg' /><img alt='_KJM0096_20241215_172245' src='https://live.staticflickr.com/65535/54210831110_3b021cd028_m.jpg' /><img alt='_KJM0094_20241215_172244' src='https://live.staticflickr.com/65535/54210669894_541846f5a3_m.jpg' /><img alt='20241214 Hang Youth' src='https://live.staticflickr.com/65535/54209281152_13bef73324_m.jpg' /><img alt='_KJM0286_20241215_174338' src='https://live.staticflickr.com/65535/54209233822_b2cc13b307_m.jpg' /><img alt='_KJM0206_20241215_174102' src='https://live.staticflickr.com/65535/54210534365_762e575a3c_m.jpg' /><img alt='B-2437 Suparna Airlines B747-400 Amsterdam' src='https://live.staticflickr.com/65535/54209920471_ab4242bf23_m.jpg' /><img alt='PH-BHA KLM Royal Dutch Airlines B787-9 Dreamliner Amsterdam' src='https://live.staticflickr.com/65535/54209920561_65492899ea_m.jpg' /><img alt='PC153941-Verbeterd-NR' src='https://live.staticflickr.com/65535/54209453195_5086ab1632_m.jpg' /><img alt='PC153785-Verbeterd-NR' src='https://live.staticflickr.com/65535/54209044966_d6616d3307_m.jpg' /><button> &lt; </button><button> &gt; </button></article><article><h3>Cambio de moneda local</h3><p>La relación entre su moneda local, EUR, y la moneda de Países Bajos, EUR, es de: 1.</p><p>Es decir, que 1 EUR es equivalente a 1 en EUR, así como 10 EUR es equivalente a 10 en EUR.</p></article>    </section>
+
+    <!-- <h3>Mapa estático</h3>
+    <input type="button" value="Obtener mapa" disabled = "true" onClick = "viajes.getMapaEstaticoGoogle();"/> -->
+
+    <section>
+        <h3>Mapa estático</h3>
+        <input type="button" value="Obtener mapa" disabled onClick = "viajes.getMapaEstaticoGoogle();"/>
+
+    </section>
+
+    <!--Mapa dinamico-->
+    <section>
+        <h3>Mapa dinámico</h3>
+        <input type="button" value="Obtener mapa" disabled onClick = "viajes.initMapDinamico();"/>
+            <div>
+                <h4>Aquí se mostrará el mapa dinámico</h4>
+
+            </div>
+    </section>
+
+    </main>
+
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    
+    <script>
+        var viajes = new Viajes();
+
+        viajes.configurarAccionesCarrusel();
+    </script>
+
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC6j4mF6blrc4kZ54S6vYZ2_FpMY9VzyRU&callback=miMapa.initMap"></script> -->
+
+</body>
+</html>
