@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+
+<!--W3C para validar despues cada ej. Luego ya github-->
+
+
+<!--LIGHTHOUSE POR TEMA COOKIES DE TERCEROS EJECUTAR EL LIGHTHOUSE EN MODO INGOCNITO-->
+
+<!-- POSIBLES ERRORES DE QUE MAPBOX NO ESTA DISPONIBLE: puedo usar DEFER Y ASYNC, atributos en link y script dentro de mapbox-->
+<!-- CARRUSEL: Usar imagenes de carrusel _m.jpg (en vez de _b.jpb), pues hace que se carguen mas rapido (aunque se vean peor que da igual) -->
+
+<!-- PARA ABRIR EL PHP EN GIT/LIGHTHOUSE Y TAL, ABRIRLO DESDE EL LOCAL, GUARDA SU HTML, Y SUBIR ESTE MANUALMENTE AL GITHUB -->
+
+<!--COPIO EL HTML TRAS JS/PHP, LO PEGO EN UN ARCHIVO (ANADIENDO EL GITHUB), Y LUEGO YA VALIDO. EN EL VALIDADOR HAY UNA OPCIONES DE PONERLO DIRECTO
+EN EL CASO DE PHP, ESO, ESTE ARCHIVO CON EL CODIGO COPIADO SUBRLO A GITHUB-->
+
+<html lang="es">
+<head>
+     <!-- Datos que describen el documento -->
+     <meta charset="UTF-8" />
+     <title>F1Desktop/Piloto</title>
+     <link href="multimedia/imagenes/favicon.ico" rel="icon" />
+     <meta name ="author" content="UO295526" />
+     <meta name ="description" content ="Pagina piloto" />
+     <meta name ="keywords" content ="HTML, CSS, JavaScript" />
+     <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+ 
+     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+     <link rel="stylesheet" type="text/css" href="estilo/layout.css" /> <!--asi asociamos mas hojas de estilo-->
+</head>
+<body>
+    <!-- Datos con el contenidos que aparece en el navegador -->
+<header>        <!--No confundir con head. Head es parte intrinseca del html y header la seccion de arriba de la pagina-->
+    <h1><a href="index.html" title="enlace al indice">F1Desktop</a></h1>
+    <nav>
+        <a href="index.html" title="enlace al indice">Index</a>  <!--importante el title por usabilidad-->
+        <a href="piloto.html" title="enlace a la pagina del piloto" class="active">Piloto</a> <!--lo "activamos" pues es enlace a la propia pagina-->
+        <a href="noticias.html" title="enlace a la pagina ">Noticias</a>
+        <a href="calendario.html" title="enlace a la pagina ">Calendario</a>
+        <a href="meteorologia.html" title="enlace a la pagina ">Meteorologia</a>
+        <a href="circuito.html" title="enlace a la pagina ">Circuito</a>
+        <a href="viajes.php" title="enlace a la pagina ">Viajes</a>
+        <a href="juegos.html" title="enlace a la pagina ">Juegos</a>
+    </nav>
+    <!--este h1 y nav, al ser comun de todas las paginas, lo metemos en un header comun de todas-->
+</header>
+
+<p>Estás en: <a href="index.html" title="enlace al indice">Inicio</a> >> Piloto</p> <!--migas entre header y main, pues va a ser algo identico en el resto de html-->
+
+<main>
+    <h2>Fernando Alonso</h2>
+<section>
+    <h3>Datos personales</h3>
+    <p>Nombre: Fernando Alonso Díaz</p>
+    <p>Equipo: Aston Martin Racing</p>
+    <p>Nacionalidad: Española</p>
+    <picture> <!--Esto es para poner varios formatos de la foto segun el dispositivo utilizado-->
+        <source media="(max-width: 465px)" srcset="multimedia/imagenes/fotoPersonalMovil.jpg" /> <!--caso dispositivo movil-->
+        <source media="(max-width: 799px)" srcset="multimedia/imagenes/fotoPersonalTablet.jpg" /> <!--caso dispositivo movil-->
+        <source media="(min-width: 800px)" srcset="multimedia/imagenes/fotoPersonal.jpg" /> <!--SIN ESTO NO VA (necesitara un min y un max ?)-->
+        <img src="multimedia/imagenes/fotoPersonal.jpg" alt="personal"/> <!--esto seria el caso normal-->
+    </picture>
+</section>
+
+    <h3>Presentación</h3>
+    <p>Fernando Alonso nació el 29 de julio de 1981 en Oviedo, Asturias. Es un piloto de automovilismo que ha marcado una época en la Fórmula 1 y en otras competiciones. Conocido por su destreza al volante y su tenacidad, Alonso ha competido para equipos emblemáticos y ha llevado el nombre de España a lo más alto del deporte del motor. Su carrera ha sido un viaje lleno de éxitos y desafíos, pero siempre ha demostrado una pasión indomable por la velocidad y la competición.</p>
+    <h4>Aficiones</h4>
+      <ul>
+        <li>Ciclismo de montaña</li>
+        <li>Waterpolo</li>
+        <li>Fútbol</li>
+        <li>Los ESports</li>
+        <li>Surf</li>
+      </ul>
+    
+      <h4>Equipos</h4>
+    <ol>
+        <li>Aston Martin Racing</li>
+        <li>Alpine</li>
+        <li>Ferrari</li>
+        <li>Royal Academy</li>
+        <li>McLaren</li>
+    </ol>
+    
+<aside>
+    <h4>Estadísticas F1</h4>
+    <dl>
+        <dt>Pit stop</dt>
+            <dd>Parada en boxes en español, se trata cuando un coche se detiene durante una carrera en boxes para que se le realicen determinadas tareas, como repostar o cambiar neumáticos.</dd>
+        <dt>Pole</dt>
+            <dd>Posición que se le asigna al piloto para empezar la carrera. Este se determina en función a la posición obtenida por los pilotos en su carrera anterios.</dd>
+        <dt>Rake</dt>
+            <dd>Diferencia en la altura del coche entre su parte delantera y la trasera.</dd>
+        <dt>Efecto suelo</dt>
+            <dd>Utilización del flujo del aire para obtener una gran velocidad gracias a la carga aerodinámica acumulada debajo del coche.</dd>
+    </dl>
+    <figure><img alt="imagen pit stop" src="multimedia/imagenes/fernandoPit.jpg"></figure>
+</aside>
+    
+    <h4>Resultados recientes</h4>
+        <ul>
+            <li>
+                <p>En la F1</p> <!--Como contexto a la lista. Dentro del li para que no cuente como otro elemento aparte-->
+                <ol>    <!--LISTA ANIDADA. La lista interna debe estar envuelta por un li-->
+                    <li>Gran Premio de México: 13º Posición</li>
+                    <li>Gran Premio de Estados Unidos: 13º Posición</li>
+                    <li>Gran Premio de Singapur: 8º posición</li>
+                </ol>
+            </li>
+            <li>
+                <p>Externo a la F1</p>
+                <ul>
+                    <li>24 Horas de Le Mans</li>
+                    <li>Campeonato del Mundo de Resistencia</li>
+                    <li>Futbol Frontier 2024</li>
+                </ul>
+            </li>
+        </ul>
+
+    <table>
+        <caption>   Última temporada   </caption>
+        <tr> <!-- Fila de encabezados -->
+            <th scope="row" id="Comp" headers="">Competición</th>
+            <td headers="Comp">Fórmula 1</td>
+        </tr>
+        <tr>
+            <th scope="row" id="Puntos" >Puntos obtenidos</th>
+            <td headers="Puntos">104 puntos</td>
+        </tr>
+        <tr>
+            <th scope="row" id="Pos" >Posición</th>
+            <td headers="Pos">10º posición</td>
+        </tr>
+        <tr>
+            <th scope="row" id="Pole" >Poles</th>
+            <td headers="Pole">Cero</td>
+        </tr>
+        <tr>
+            <th scope="row" id="Vict" >Victorias</th>
+            <td headers="Vict">Cero</td>
+        </tr>
+        <tr>
+            <th scope="row" id="Podio" >Podios</th>
+            <td headers="Podio">Dos</td>
+        </tr>
+    </table>
+
+
+    <!--<video src="multimedia/videos/pruebaVideo.mp4" controls preload="prueba">Prueba</video>-->
+    <video controls preload muted loop width="300" height="250">
+        <source src="multimedia/videos/fernandoPodio.mp4" type="video/mp4"/> <!--imp la /, no un .-->
+        <source src="multimedia/videos/fernandoPodio.webm" type="video/webm"/>
+    </video>
+
+    <h2>Enlaces externos</h2>
+    <p>Para consultar información adicional sobre Fernando Alonso prueba con su
+        <a href="https://www.fernandoalonso.com/">Página oficial</a>
+        y sus
+        <a href="https://www.instagram.com/fernandoalo_oficial/">Redes</a>
+    </p>
+    
+    <!--<audio src="multimedia/audios/fernandu.m4a" controls></audio>--> <!--Este controls es el que anade el reproductor del audio, pues autoplay es mejor evitarlo-->
+    <audio controls>
+        <source src="multimedia/audios/fernanduMP3.mp3" type="audio/mp3"/> <!--imp la /, no un .-->
+        <source src="multimedia/audios/fernanduWAW.wav" type="audio/wav"/>
+    </audio>
+</main>
+</body>
+</html>

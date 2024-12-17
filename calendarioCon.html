@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="es"><head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8">
+    <title>F1Desktop/Calendario</title>
+    <link href="multimedia/imagenes/favicon.ico" rel="icon">
+    <meta name="author" content="UO295526">
+    <meta name="description" content="Calendario">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css">
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css"> <!--asi asociamos mas hojas de estilo-->
+
+    <link rel="stylesheet" type="text/css" href="estilo/agenda_grid.css">
+
+    <script src="js/agenda.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Datos con el contenidos que aparece en el navegador -->
+    <header>        <!--No confundir con head. Head es parte intrinseca del html y header la seccion de arriba de la pagina-->
+      <h1><a href="index.html" title="enlace al indice">F1Desktop</a></h1>
+      <nav>
+          <a href="index.html" title="enlace al indice">Index</a>  <!--importante el title por usabilidad-->
+          <a href="piloto.html" title="enlace a la pagina del piloto">Piloto</a> <!--lo "activamos" pues es enlace a la propia pagina-->
+          <a href="noticias.html" title="enlace a la pagina de noticias">Noticias</a>
+          <a href="calendario.html" title="enlace a la pagina del calendario" class="active">Calendario</a>
+          <a href="meteorologia.html" title="enlace a la pagina de meteorologia">Meteorologia</a>
+          <a href="circuito.html" title="enlace a la pagina de circuito">Circuito</a>
+          <a href="viajes.php" title="enlace a la pagina de viajes">Viajes</a>
+          <a href="juegos.html" title="enlace a la pagina de juegos">Juegos</a>
+      </nav>
+      <!--este h1 y nav, al ser comun de todas las paginas, lo metemos en un header comun de todas-->
+    </header>
+
+    <p>Estás en: <a href="index.html" title="enlace al indice">Inicio</a> &gt;&gt; Calendario</p> <!--migas entre header y main, pues va a ser algo identico en el resto de html-->
+
+    <main>
+
+        <h2>Calendario</h2>
+
+        <button>Ver carreras</button>
+
+    <section><h3>Carreras de la temporada</h3><article><h4 lang="en">Bahrain Grand Prix</h4><p lang="en">Circuito: Bahrain International Circuit</p><p>Coordenadas: Lat: 26.0325, Long: 50.5106</p><p>Fecha: 2024-03-02</p><p>Hora: 15:00:00Z</p></article><article><h4 lang="en">Saudi Arabian Grand Prix</h4><p lang="en">Circuito: Jeddah Corniche Circuit</p><p>Coordenadas: Lat: 21.6319, Long: 39.1044</p><p>Fecha: 2024-03-09</p><p>Hora: 17:00:00Z</p></article><article><h4 lang="en">Australian Grand Prix</h4><p lang="en">Circuito: Albert Park Grand Prix Circuit</p><p>Coordenadas: Lat: -37.8497, Long: 144.968</p><p>Fecha: 2024-03-24</p><p>Hora: 04:00:00Z</p></article><article><h4 lang="en">Japanese Grand Prix</h4><p lang="en">Circuito: Suzuka Circuit</p><p>Coordenadas: Lat: 34.8431, Long: 136.541</p><p>Fecha: 2024-04-07</p><p>Hora: 05:00:00Z</p></article><article><h4 lang="en">Chinese Grand Prix</h4><p lang="en">Circuito: Shanghai International Circuit</p><p>Coordenadas: Lat: 31.3389, Long: 121.22</p><p>Fecha: 2024-04-21</p><p>Hora: 07:00:00Z</p></article><article><h4 lang="en">Miami Grand Prix</h4><p lang="en">Circuito: Miami International Autodrome</p><p>Coordenadas: Lat: 25.9581, Long: -80.2389</p><p>Fecha: 2024-05-05</p><p>Hora: 20:00:00Z</p></article><article><h4 lang="en">Emilia Romagna Grand Prix</h4><p lang="en">Circuito: Autodromo Enzo e Dino Ferrari</p><p>Coordenadas: Lat: 44.3439, Long: 11.7167</p><p>Fecha: 2024-05-19</p><p>Hora: 13:00:00Z</p></article><article><h4 lang="en">Monaco Grand Prix</h4><p lang="en">Circuito: Circuit de Monaco</p><p>Coordenadas: Lat: 43.7347, Long: 7.42056</p><p>Fecha: 2024-05-26</p><p>Hora: 13:00:00Z</p></article><article><h4 lang="en">Canadian Grand Prix</h4><p lang="en">Circuito: Circuit Gilles Villeneuve</p><p>Coordenadas: Lat: 45.5, Long: -73.5228</p><p>Fecha: 2024-06-09</p><p>Hora: 18:00:00Z</p></article><article><h4 lang="en">Spanish Grand Prix</h4><p lang="en">Circuito: Circuit de Barcelona-Catalunya</p><p>Coordenadas: Lat: 41.57, Long: 2.26111</p><p>Fecha: 2024-06-23</p><p>Hora: 13:00:00Z</p></article><article><h4 lang="en">Austrian Grand Prix</h4><p lang="en">Circuito: Red Bull Ring</p><p>Coordenadas: Lat: 47.2197, Long: 14.7647</p><p>Fecha: 2024-06-30</p><p>Hora: 13:00:00Z</p></article><article><h4 lang="en">British Grand Prix</h4><p lang="en">Circuito: Silverstone Circuit</p><p>Coordenadas: Lat: 52.0786, Long: -1.01694</p><p>Fecha: 2024-07-07</p><p>Hora: 14:00:00Z</p></article><article><h4 lang="en">Hungarian Grand Prix</h4><p lang="en">Circuito: Hungaroring</p><p>Coordenadas: Lat: 47.5789, Long: 19.2486</p><p>Fecha: 2024-07-21</p><p>Hora: 13:00:00Z</p></article><article><h4 lang="en">Belgian Grand Prix</h4><p lang="en">Circuito: Circuit de Spa-Francorchamps</p><p>Coordenadas: Lat: 50.4372, Long: 5.97139</p><p>Fecha: 2024-07-28</p><p>Hora: 13:00:00Z</p></article><article><h4 lang="en">Dutch Grand Prix</h4><p lang="en">Circuito: Circuit Park Zandvoort</p><p>Coordenadas: Lat: 52.3888, Long: 4.54092</p><p>Fecha: 2024-08-25</p><p>Hora: 13:00:00Z</p></article><article><h4 lang="en">Italian Grand Prix</h4><p lang="en">Circuito: Autodromo Nazionale di Monza</p><p>Coordenadas: Lat: 45.6156, Long: 9.28111</p><p>Fecha: 2024-09-01</p><p>Hora: 13:00:00Z</p></article><article><h4 lang="en">Azerbaijan Grand Prix</h4><p lang="en">Circuito: Baku City Circuit</p><p>Coordenadas: Lat: 40.3725, Long: 49.8533</p><p>Fecha: 2024-09-15</p><p>Hora: 11:00:00Z</p></article><article><h4 lang="en">Singapore Grand Prix</h4><p lang="en">Circuito: Marina Bay Street Circuit</p><p>Coordenadas: Lat: 1.2914, Long: 103.864</p><p>Fecha: 2024-09-22</p><p>Hora: 12:00:00Z</p></article><article><h4 lang="en">United States Grand Prix</h4><p lang="en">Circuito: Circuit of the Americas</p><p>Coordenadas: Lat: 30.1328, Long: -97.6411</p><p>Fecha: 2024-10-20</p><p>Hora: 19:00:00Z</p></article><article><h4 lang="en">Mexico City Grand Prix</h4><p lang="en">Circuito: Autódromo Hermanos Rodríguez</p><p>Coordenadas: Lat: 19.4042, Long: -99.0907</p><p>Fecha: 2024-10-27</p><p>Hora: 20:00:00Z</p></article><article><h4 lang="en">São Paulo Grand Prix</h4><p lang="en">Circuito: Autódromo José Carlos Pace</p><p>Coordenadas: Lat: -23.7036, Long: -46.6997</p><p>Fecha: 2024-11-03</p><p>Hora: 17:00:00Z</p></article><article><h4 lang="en">Las Vegas Grand Prix</h4><p lang="en">Circuito: Las Vegas Strip Street Circuit</p><p>Coordenadas: Lat: 36.1147, Long: -115.173</p><p>Fecha: 2024-11-23</p><p>Hora: 06:00:00Z</p></article><article><h4 lang="en">Qatar Grand Prix</h4><p lang="en">Circuito: Losail International Circuit</p><p>Coordenadas: Lat: 25.49, Long: 51.4542</p><p>Fecha: 2024-12-01</p><p>Hora: 17:00:00Z</p></article><article><h4 lang="en">Abu Dhabi Grand Prix</h4><p lang="en">Circuito: Yas Marina Circuit</p><p>Coordenadas: Lat: 24.4672, Long: 54.6031</p><p>Fecha: 2024-12-08</p><p>Hora: 13:00:00Z</p></article></section></main>
+
+    <script>
+        var agenda = new Agenda();
+        //agenda.getCarreras();
+    </script>
+
+
+</body></html>

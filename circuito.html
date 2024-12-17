@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+    <title>F1Desktop/Circuito</title>
+    <link href="multimedia/imagenes/favicon.ico" rel="icon" />
+    <meta name ="author" content="UO295526" />
+    <meta name ="description" content ="Circuito" />
+    <meta name ="keywords" content ="HTML, CSS, JavaScript" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" /> <!--asi asociamos mas hojas de estilo-->
+
+    <!--Revisar-->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet" />
+
+    <script src="js/circuito.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- Datos con el contenidos que aparece en el navegador -->
+    <header>        <!--No confundir con head. Head es parte intrinseca del html y header la seccion de arriba de la pagina-->
+      <h1><a href="index.html" title="enlace al indice">F1Desktop</a></h1>
+      <nav>
+          <a href="index.html" title="enlace al indice">Index</a>  <!--importante el title por usabilidad-->
+          <a href="piloto.html" title="enlace a la pagina del piloto">Piloto</a> <!--lo "activamos" pues es enlace a la propia pagina-->
+          <a href="noticias.html" title="enlace a la pagina de noticias">Noticias</a>
+          <a href="calendario.html" title="enlace a la pagina del calendario">Calendario</a>
+          <a href="meteorologia.html" title="enlace a la pagina de meteorologia">Meteorologia</a>
+          <a href="circuito.html" title="enlace a la pagina de circuito" class="active">Circuito</a>
+          <a href="viajes.php" title="enlace a la pagina de viajes">Viajes</a>
+          <a href="juegos.html" title="enlace a la pagina de juegos">Juegos</a>
+      </nav>
+      <!--este h1 y nav, al ser comun de todas las paginas, lo metemos en un header comun de todas-->
+    </header>
+
+
+    <p>Estás en: <a href="index.html" title="enlace al indice">Inicio</a> >> Circuito</p> <!--migas entre header y main, pues va a ser algo identico en el resto de html-->
+    
+    <main>
+
+    <h2>Circuito</h2>
+    
+    <!--para el xml-->
+    <section>
+        <h3>Datos del circuito</h3>
+
+        <label>Cargar: <input type="file" onchange="circuito.readInputFileXML(this.files);"></label>
+        <p>Inserte el archivo en formato XML</p>
+
+    </section>
+
+    <!--para el svg-->
+    <section>
+        <h3>Altimetría del circuito</h3>
+        
+        <label>Cargar: <input type="file" onchange="circuito.readInputSVG(this.files);"></label>
+        <p>Inserte el archivo en formato SVG</p>
+    </section>
+
+    <!--para el kml-->
+    <section>
+        <h3>Mapa del circuito</h3>
+        <label>Cargar: <input type="file" onchange="circuito.mapFromInputFileKML(this.files);"></label>
+        <p>Inserte el archivo en formato KML</p>
+        
+        
+        <div>
+            <h4>Aquí se mostrará el mapa del circuito</h4>
+            
+        </div>
+    </section>
+
+    <!--aqui-->
+
+
+    </main>
+
+    <!-- REVISAR -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
+    <script>
+        var circuito = new Circuito();
+    </script>
+
+</body>
+</html>

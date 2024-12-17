@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html lang="es"><head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8">
+    <title>F1Desktop/Circuito</title>
+    <link href="multimedia/imagenes/favicon.ico" rel="icon">
+    <meta name="author" content="UO295526">
+    <meta name="description" content="Circuito">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css">
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css"> <!--asi asociamos mas hojas de estilo-->
+
+    <!--Revisar-->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
+
+    <script src="js/circuito.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- Datos con el contenidos que aparece en el navegador -->
+    <header>        <!--No confundir con head. Head es parte intrinseca del html y header la seccion de arriba de la pagina-->
+      <h1><a href="index.html" title="enlace al indice">F1Desktop</a></h1>
+      <nav>
+          <a href="index.html" title="enlace al indice">Index</a>  <!--importante el title por usabilidad-->
+          <a href="piloto.html" title="enlace a la pagina del piloto">Piloto</a> <!--lo "activamos" pues es enlace a la propia pagina-->
+          <a href="noticias.html" title="enlace a la pagina de noticias">Noticias</a>
+          <a href="calendario.html" title="enlace a la pagina del calendario">Calendario</a>
+          <a href="meteorologia.html" title="enlace a la pagina de meteorologia">Meteorologia</a>
+          <a href="circuito.html" title="enlace a la pagina de circuito" class="active">Circuito</a>
+          <a href="viajes.php" title="enlace a la pagina de viajes">Viajes</a>
+          <a href="juegos.html" title="enlace a la pagina de juegos">Juegos</a>
+      </nav>
+      <!--este h1 y nav, al ser comun de todas las paginas, lo metemos en un header comun de todas-->
+    </header>
+
+
+    <p>Estás en: <a href="index.html" title="enlace al indice">Inicio</a> &gt;&gt; Circuito</p> <!--migas entre header y main, pues va a ser algo identico en el resto de html-->
+    
+    <main>
+
+    <h2>Circuito</h2>
+    
+    <!--para el xml-->
+    <section>
+        <h3>Datos del circuito</h3>
+
+        <label>Cargar: <input type="file" onchange="circuito.readInputFileXML(this.files);"></label>
+        <p>Inserte el archivo en formato XML</p>
+
+    <article><h4>Resultado obtenido: </h4><p>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+</p><p>&lt;!DOCTYPE circuito SYSTEM "circuito.dtd"&gt;
+</p><p>&lt;circuito&gt;
+</p><p>&lt;nombre&gt;Zandvoort&lt;/nombre&gt;
+</p><p>&lt;longitud unidades="km"&gt;4'259 km&lt;/longitud&gt;
+</p><p>&lt;anchura unidades="km"&gt;X km&lt;/anchura&gt;
+</p><p>&lt;fechaInicio&gt;2024-08-23&lt;/fechaInicio&gt;
+</p><p>&lt;horaInicio&gt;12:00:00&lt;/horaInicio&gt;
+</p><p>&lt;numeroVueltas&gt;72&lt;/numeroVueltas&gt;
+</p><p>&lt;localidad&gt;Holanda Septentrional&lt;/localidad&gt;
+</p><p>&lt;pais&gt;Paises Bajos&lt;/pais&gt;
+</p><p>&lt;referencias&gt;
+</p><p>    &lt;referencia&gt;
+</p><p>        &lt;enlace&gt;https://www.dazn.com/es-ES/news/motor/circuito-zandvoort-donde-esta-como-es-caracteristicas-como-llegar-fotos-escenario-gp-paises-bajos-mundial-f1/z4tfep6uuudo1fqpzfnrzconu&lt;/enlace&gt;
+</p><p>    &lt;/referencia&gt;
+</p><p>    &lt;referencia&gt;
+</p><p>        &lt;enlace&gt;https://www.statsf1.com/es/circuit-zandvoort.aspx&lt;/enlace&gt;
+</p><p>    &lt;/referencia&gt;
+</p><p>    &lt;referencia&gt;
+</p><p>        &lt;enlace&gt;https://www.redbull.com/pe-es/f1-circuito-zandvoort-lo-que-debes-saber&lt;/enlace&gt;
+</p><p>    &lt;/referencia&gt;
+</p><p>    &lt;referencia&gt;
+</p><p>        &lt;enlace&gt;https://www.p1travel.com/es/blog/guia-definitiva-de-la-pista-como-vivir-el-gp-de-paises-bajos#curvas-famosas&lt;/enlace&gt;
+</p><p>    &lt;/referencia&gt;
+</p><p>&lt;/referencias&gt;
+</p><p>&lt;fotografias&gt;
+</p><p>    &lt;fotografia descripcion="Imagen del circuito"&gt;
+</p><p>        &lt;enlace&gt;fotoCircuito.PNG&lt;/enlace&gt;
+</p><p>    &lt;/fotografia&gt;
+</p><p>&lt;/fotografias&gt;
+</p><p>&lt;videos&gt;
+</p><p>    &lt;video&gt;
+</p><p>        &lt;enlace&gt;fotoCircuito.PNG&lt;/enlace&gt;
+</p><p>    &lt;/video&gt;
+</p><p>&lt;/videos&gt;
+</p><p>&lt;coordenadas&gt;
+</p><p>    &lt;longitudCoordenadas&gt;4.543011&lt;/longitudCoordenadas&gt;
+</p><p>    &lt;latitudCoordenadas&gt;52.388292&lt;/latitudCoordenadas&gt;
+</p><p>    &lt;altitudCoordenadas&gt;34.8970808&lt;/altitudCoordenadas&gt;
+</p><p>&lt;/coordenadas&gt;
+</p><p>&lt;puntosTramos&gt;
+</p><p>    &lt;tramoActual nombreTramo="Tarzanbocht-Gerlachbocht"&gt;
+</p><p>        &lt;distanciaTramo unidades="m"&gt;297.24&lt;/distanciaTramo&gt;
+</p><p>        &lt;puntoFinalTramo nombrePuntoFinal="Gerlachbocht" longitud="4.54283" latitud="52.38916" altitud="16.5509214"&gt;&lt;/puntoFinalTramo&gt;
+</p><p>        &lt;numSectorTramo&gt;1&lt;/numSectorTramo&gt;
+</p><p>    &lt;/tramoActual&gt;
+</p><p>    &lt;tramoActual nombreTramo="Gerlachbocht-Hugenholtzbocht"&gt;
+</p><p>        &lt;distanciaTramo unidades="m"&gt;110&lt;/distanciaTramo&gt;
+</p><p>        &lt;puntoFinalTramo nombrePuntoFinal="Hugenholtzbocht " longitud="4.54118" latitud="52.38836" altitud="15.945032"&gt;&lt;/puntoFinalTramo&gt;
+</p><p>        &lt;numSectorTramo&gt;2&lt;/numSectorTramo&gt;
+</p><p>    &lt;/tramoActual&gt;
+</p><p>    &lt;tramoActual nombreTramo="Hugenholtzbocht-Hunserug"&gt;
+</p><p>        &lt;distanciaTramo unidades="m"&gt;215&lt;/distanciaTramo&gt;
+</p><p>        &lt;puntoFinalTramo nombrePuntoFinal="Hunserug " longitud="4.54414" latitud="52.3885" altitud="22.0771255"&gt;&lt;/puntoFinalTramo&gt;
+</p><p>        &lt;numSectorTramo&gt;3&lt;/numSectorTramo&gt;
+</p><p>    &lt;/tramoActual&gt;
+</p><p>    &lt;tramoActual nombreTramo="Hunserug-Rob Slotemakerbocth"&gt;
+</p><p>        &lt;distanciaTramo unidades="m"&gt;155.95&lt;/distanciaTramo&gt;
+</p><p>        &lt;puntoFinalTramo nombrePuntoFinal="Rob Slotemakerbocth" longitud="4.54635" latitud="52.388828" altitud="15.886671"&gt;&lt;/puntoFinalTramo&gt;
+</p><p>        &lt;numSectorTramo&gt;4&lt;/numSectorTramo&gt;
+</p><p>    &lt;/tramoActual&gt;
+</p><p>    &lt;tramoActual nombreTramo="Rob Slotemakerbocth-Bocht 6"&gt;
+</p><p>        &lt;distanciaTramo unidades="m"&gt;187.5&lt;/distanciaTramo&gt;
+</p><p>        &lt;puntoFinalTramo nombrePuntoFinal="Bocht 6" longitud="4.54924" latitud="52.38895" altitud="22.0628285"&gt;&lt;/puntoFinalTramo&gt;
+</p><p>        &lt;numSectorTramo&gt;5&lt;/numSectorTramo&gt;
+</p><p>    &lt;/tramoActual&gt;
+</p><p>    &lt;tramoActual nombreTramo="Bocht 6-Scheivlak"&gt;
+</p><p>        &lt;distanciaTramo unidades="m"&gt;240.27&lt;/distanciaTramo&gt;
+</p><p>        &lt;puntoFinalTramo nombrePuntoFinal="Scheivlak" longitud="4.55270" latitud="52.3886" altitud="17.3983142"&gt;&lt;/puntoFinalTramo&gt;
+</p><p>        &lt;numSectorTramo&gt;6&lt;/numSectorTramo&gt;
+</p><p>    &lt;/tramoActual&gt;
+</p><p>    &lt;tramoActual nombreTramo="Scheivlak-Masterbocht"&gt;
+</p><p>        &lt;distanciaTramo unidades="m"&gt;305.73&lt;/distanciaTramo&gt;
+</p><p>        &lt;puntoFinalTramo nombrePuntoFinal="Masterbocht" longitud="4.55117" latitud="52.38579" altitud="15.5566243"&gt;&lt;/puntoFinalTramo&gt;
+</p><p>        &lt;numSectorTramo&gt;7&lt;/numSectorTramo&gt;
+</p><p>    &lt;/tramoActual&gt;
+</p><p>    &lt;tramoActual nombreTramo="Masterbocht-Bocht 9"&gt;
+</p><p>        &lt;distanciaTramo unidades="m"&gt;210.81&lt;/distanciaTramo&gt;
+</p><p>        &lt;puntoFinalTramo nombrePuntoFinal="Bocht 9" longitud="4.54825" latitud="52.38651" altitud="16.2918884"&gt;&lt;/puntoFinalTramo&gt;
+</p><p>        &lt;numSectorTramo&gt;8&lt;/numSectorTramo&gt;
+</p><p>    &lt;/tramoActual&gt;
+</p><p>    &lt;tramoActual nombreTramo="Bocht 9-Bocht 10"&gt;
+</p><p>        &lt;distanciaTramo unidades="m"&gt;223.94&lt;/distanciaTramo&gt;
+</p><p>        &lt;puntoFinalTramo nombrePuntoFinal="Bocht 10" longitud="4.55118" latitud="52.38765" altitud="15.8426112"&gt;&lt;/puntoFinalTramo&gt;
+</p><p>        &lt;numSectorTramo&gt;9&lt;/numSectorTramo&gt;
+</p><p>    &lt;/tramoActual&gt;
+</p><p>    &lt;tramoActual nombreTramo="Bocht 10-Hans Ernstbocht"&gt;
+</p><p>        &lt;distanciaTramo unidades="m"&gt;539.35&lt;/distanciaTramo&gt;
+</p><p>        &lt;puntoFinalTramo nombrePuntoFinal="Hans Ernstbocht" longitud="4.54308" latitud="52.38714" altitud="15.3211318"&gt;&lt;/puntoFinalTramo&gt;
+</p><p>        &lt;numSectorTramo&gt;10&lt;/numSectorTramo&gt;
+</p><p>    &lt;/tramoActual&gt;
+</p><p>    &lt;tramoActual nombreTramo="Hans Ernstbocht-Hans Ernstbocht"&gt;
+</p><p>        &lt;distanciaTramo unidades="m"&gt;70.43&lt;/distanciaTramo&gt;
+</p><p>        &lt;puntoFinalTramo nombrePuntoFinal="Hans Ernstbocht" longitud="4.54226" latitud="52.38744" altitud="14.9955985"&gt;&lt;/puntoFinalTramo&gt;
+</p><p>        &lt;numSectorTramo&gt;11&lt;/numSectorTramo&gt;
+</p><p>    &lt;/tramoActual&gt;
+</p><p>    &lt;tramoActual nombreTramo="Hans Ernstbocht-Bocht 13"&gt;
+</p><p>        &lt;distanciaTramo unidades="m"&gt;311.31&lt;/distanciaTramo&gt;
+</p><p>        &lt;puntoFinalTramo nombrePuntoFinal="Bocht 13" longitud="4.54" latitud="52.38464" altitud="14.8534845"&gt;&lt;/puntoFinalTramo&gt;
+</p><p>        &lt;numSectorTramo&gt;12&lt;/numSectorTramo&gt;
+</p><p>    &lt;/tramoActual&gt;
+</p><p>    &lt;tramoActual nombreTramo="Bocht 13-Arie Luyendijkbocht"&gt;
+</p><p>        &lt;distanciaTramo unidades="m"&gt;266.75&lt;/distanciaTramo&gt;
+</p><p>        &lt;puntoFinalTramo nombrePuntoFinal="Arie Luyendijkbocht" longitud="4.53878" latitud="52.38522" altitud="20.6430024"&gt;&lt;/puntoFinalTramo&gt;
+</p><p>        &lt;numSectorTramo&gt;13&lt;/numSectorTramo&gt;
+</p><p>    &lt;/tramoActual&gt;
+</p><p>    &lt;tramoActual nombreTramo="Arie Luyendijkbocht-Tarzanbocht"&gt;
+</p><p>        &lt;distanciaTramo unidades="m"&gt;775.47&lt;/distanciaTramo&gt;
+</p><p>        &lt;puntoFinalTramo nombrePuntoFinal="Tarzanbocht" longitud="4.54341" latitud="52.3918" altitud="17.680657"&gt;&lt;/puntoFinalTramo&gt;
+</p><p>        &lt;numSectorTramo&gt;14&lt;/numSectorTramo&gt;
+</p><p>    &lt;/tramoActual&gt;
+</p><p>&lt;/puntosTramos&gt;
+</p><p>
+</p><p>
+</p><p>&lt;/circuito&gt;
+</p><p></p></article></section>
+
+    <!--para el svg-->
+    <section>
+        <h3>Altimetría del circuito</h3>
+        
+        <label>Cargar: <input type="file" onchange="circuito.readInputSVG(this.files);"></label>
+        <p>Inserte el archivo en formato svg</p>
+    <article><h4>Resultado obtenido: </h4><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="450" height="225">
+<rect width="450" height="225" fill="lightblue"></rect>
+<line x1="36.0" y1="202.5" x2="418.5" y2="202.5" stroke="black" stroke-width="1"></line>
+<line x1="36.0" y1="202.5" x2="36.0" y2="11.25" stroke="black" stroke-width="1"></line>
+<line x1="31.0" y1="202.5" x2="36.0" y2="202.5" stroke="black" stroke-width="2"></line>
+<text x="6.0" y="207.5" font-size="8">10 msnm</text>
+<line x1="31.0" y1="175.72335761447434" x2="36.0" y2="175.72335761447434" stroke="black" stroke-width="2"></line>
+<text x="6.0" y="180.72335761447434" font-size="8">12 msnm</text>
+<line x1="31.0" y1="148.94671522894865" x2="36.0" y2="148.94671522894865" stroke="black" stroke-width="2"></line>
+<text x="6.0" y="153.94671522894865" font-size="8">14 msnm</text>
+<line x1="31.0" y1="122.17007284342299" x2="36.0" y2="122.17007284342299" stroke="black" stroke-width="2"></line>
+<text x="6.0" y="127.17007284342299" font-size="8">16 msnm</text>
+<line x1="31.0" y1="95.39343045789731" x2="36.0" y2="95.39343045789731" stroke="black" stroke-width="2"></line>
+<text x="6.0" y="100.39343045789731" font-size="8">18 msnm</text>
+<line x1="31.0" y1="68.61678807237163" x2="36.0" y2="68.61678807237163" stroke="black" stroke-width="2"></line>
+<text x="6.0" y="73.61678807237163" font-size="8">20 msnm</text>
+<line x1="31.0" y1="41.84014568684597" x2="36.0" y2="41.84014568684597" stroke="black" stroke-width="2"></line>
+<text x="6.0" y="46.84014568684597" font-size="8">22 msnm</text>
+<line x1="31.0" y1="15.063503301320281" x2="36.0" y2="15.063503301320281" stroke="black" stroke-width="2"></line>
+<text x="6.0" y="20.06350330132028" font-size="8">24 msnm</text>
+<line x1="36.0" y1="202.5" x2="36.0" y2="207.5" stroke="black" stroke-width="3"></line>
+<text x="26.0" y="222.5" font-size="12">0 m</text>
+<line x1="74.24355195926267" y1="202.5" x2="74.24355195926267" y2="207.5" stroke="black" stroke-width="3"></line>
+<text x="64.24355195926267" y="222.5" font-size="12">430 m</text>
+<line x1="112.48710391852535" y1="202.5" x2="112.48710391852535" y2="207.5" stroke="black" stroke-width="3"></line>
+<text x="102.48710391852535" y="222.5" font-size="12">860 m</text>
+<line x1="150.73065587778802" y1="202.5" x2="150.73065587778802" y2="207.5" stroke="black" stroke-width="3"></line>
+<text x="140.73065587778802" y="222.5" font-size="12">1290 m</text>
+<line x1="188.9742078370507" y1="202.5" x2="188.9742078370507" y2="207.5" stroke="black" stroke-width="3"></line>
+<text x="178.9742078370507" y="222.5" font-size="12">1720 m</text>
+<line x1="227.21775979631337" y1="202.5" x2="227.21775979631337" y2="207.5" stroke="black" stroke-width="3"></line>
+<text x="217.21775979631337" y="222.5" font-size="12">2150 m</text>
+<line x1="265.46131175557605" y1="202.5" x2="265.46131175557605" y2="207.5" stroke="black" stroke-width="3"></line>
+<text x="255.46131175557605" y="222.5" font-size="12">2580 m</text>
+<line x1="303.7048637148387" y1="202.5" x2="303.7048637148387" y2="207.5" stroke="black" stroke-width="3"></line>
+<text x="293.7048637148387" y="222.5" font-size="12">3010 m</text>
+<line x1="341.9484156741014" y1="202.5" x2="341.9484156741014" y2="207.5" stroke="black" stroke-width="3"></line>
+<text x="331.9484156741014" y="222.5" font-size="12">3440 m</text>
+<line x1="380.1919676333641" y1="202.5" x2="380.1919676333641" y2="207.5" stroke="black" stroke-width="3"></line>
+<text x="370.1919676333641" y="222.5" font-size="12">3870 m</text>
+<line x1="418.43551959262675" y1="202.5" x2="418.43551959262675" y2="207.5" stroke="black" stroke-width="3"></line>
+<text x="408.43551959262675" y="222.5" font-size="12">4300 m</text>
+<circle cx="62.436077638072646" cy="114.79416018825641" r="6" fill="red"></circle>
+<circle cx="72.21931186020961" cy="122.90600208274678" r="6" fill="red"></circle>
+<circle cx="91.34108783984095" cy="40.807564720693534" r="6" fill="red"></circle>
+<circle cx="105.21104581204331" cy="123.68735789587761" r="6" fill="red"></circle>
+<circle cx="121.8870132361404" cy="40.998977548786485" r="6" fill="red"></circle>
+<circle cx="143.2562649320754" cy="103.44899320542176" r="6" fill="red"></circle>
+<circle cx="170.44743037511117" cy="128.10612912408905" r="6" fill="red"></circle>
+<circle cx="189.196554069372" cy="118.26217719178133" r="6" fill="red"></circle>
+<circle cx="209.1134401757843" cy="124.27724464996649" r="6" fill="red"></circle>
+<circle cx="257.0824163367804" cy="131.25897835257575" r="6" fill="red"></circle>
+<circle cx="263.3463543937359" cy="135.61732273191575" r="6" fill="red"></circle>
+<circle cx="291.0337966273128" cy="137.51999060990406" r="6" fill="red"></circle>
+<circle cx="314.758139615995" cy="60.00806541345426" r="6" fill="red"></circle>
+<circle cx="383.72727272727275" cy="99.66889711255777" r="6" fill="red"></circle>
+<polyline points="62.436077638072646,114.79416018825641 72.21931186020961,122.90600208274678 91.34108783984095,40.807564720693534 105.21104581204331,123.68735789587761 121.8870132361404,40.998977548786485 143.2562649320754,103.44899320542176 170.44743037511117,128.10612912408905 189.196554069372,118.26217719178133 209.1134401757843,124.27724464996649 257.0824163367804,131.25897835257575 263.3463543937359,135.61732273191575 291.0337966273128,137.51999060990406 314.758139615995,60.00806541345426 383.72727272727275,99.66889711255777" style="fill:none;stroke:red;stroke-width:4"></polyline>
+</svg></article></section>
+
+    <!--para el kml-->
+    <section>
+        <h3>Mapa del circuito</h3>
+        <label>Cargar: <input type="file" onchange="circuito.mapFromInputFileKML(this.files);"></label>
+        <p>Inserte el archivo en formato KML</p>
+        
+        
+        <div class="mapboxgl-map"><div class="mapboxgl-canary" style="visibility: hidden;"></div><div class="mapboxgl-canvas-container mapboxgl-interactive mapboxgl-touch-drag-pan mapboxgl-touch-zoom-rotate"><canvas class="mapboxgl-canvas" tabindex="0" aria-label="Map" role="region" width="742" height="435" style="width: 741.156px; height: 435px;"></canvas><div aria-label="Map marker" class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(365px, 222px) translate(-50%, -50%) translate(0px, -14px);"><svg display="block" height="41px" width="27px" viewBox="0 0 27 41"><defs><radialGradient id="shadowGradient"><stop offset="10%" stop-opacity="0.4"></stop><stop offset="100%" stop-opacity="0.05"></stop></radialGradient></defs><ellipse cx="13.5" cy="34.8" rx="10.5" ry="5.25" fill="url(#shadowGradient)"></ellipse><path fill="red" d="M27,13.5C27,19.07 20.25,27 14.75,34.5C14.02,35.5 12.98,35.5 12.25,34.5C6.75,27 0,19.22 0,13.5C0,6.04 6.04,0 13.5,0C20.96,0 27,6.04 27,13.5Z"></path><path opacity="0.25" d="M13.5,0C6.04,0 0,6.04 0,13.5C0,19.22 6.75,27 12.25,34.5C13,35.52 14.02,35.5 14.75,34.5C20.25,27 27,19.07 27,13.5C27,6.04 20.96,0 13.5,0ZM13.5,1C20.42,1 26,6.58 26,13.5C26,15.9 24.5,19.18 22.22,22.74C19.95,26.3 16.71,30.14 13.94,33.91C13.74,34.18 13.61,34.32 13.5,34.44C13.39,34.32 13.26,34.18 13.06,33.91C10.28,30.13 7.41,26.31 5.02,22.77C2.62,19.23 1,15.95 1,13.5C1,6.58 6.58,1 13.5,1Z"></path><circle fill="white" cx="13.5" cy="13.5" r="5.5"></circle></svg></div><div aria-label="Map marker" class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(324px, 255px) translate(-50%, -50%) translate(0px, -14px);"><svg display="block" height="41px" width="27px" viewBox="0 0 27 41"><defs><radialGradient id="shadowGradient"><stop offset="10%" stop-opacity="0.4"></stop><stop offset="100%" stop-opacity="0.05"></stop></radialGradient></defs><ellipse cx="13.5" cy="34.8" rx="10.5" ry="5.25" fill="url(#shadowGradient)"></ellipse><path fill="red" d="M27,13.5C27,19.07 20.25,27 14.75,34.5C14.02,35.5 12.98,35.5 12.25,34.5C6.75,27 0,19.22 0,13.5C0,6.04 6.04,0 13.5,0C20.96,0 27,6.04 27,13.5Z"></path><path opacity="0.25" d="M13.5,0C6.04,0 0,6.04 0,13.5C0,19.22 6.75,27 12.25,34.5C13,35.52 14.02,35.5 14.75,34.5C20.25,27 27,19.07 27,13.5C27,6.04 20.96,0 13.5,0ZM13.5,1C20.42,1 26,6.58 26,13.5C26,15.9 24.5,19.18 22.22,22.74C19.95,26.3 16.71,30.14 13.94,33.91C13.74,34.18 13.61,34.32 13.5,34.44C13.39,34.32 13.26,34.18 13.06,33.91C10.28,30.13 7.41,26.31 5.02,22.77C2.62,19.23 1,15.95 1,13.5C1,6.58 6.58,1 13.5,1Z"></path><circle fill="white" cx="13.5" cy="13.5" r="5.5"></circle></svg></div><div aria-label="Map marker" class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(397px, 249px) translate(-50%, -50%) translate(0px, -14px);"><svg display="block" height="41px" width="27px" viewBox="0 0 27 41"><defs><radialGradient id="shadowGradient"><stop offset="10%" stop-opacity="0.4"></stop><stop offset="100%" stop-opacity="0.05"></stop></radialGradient></defs><ellipse cx="13.5" cy="34.8" rx="10.5" ry="5.25" fill="url(#shadowGradient)"></ellipse><path fill="red" d="M27,13.5C27,19.07 20.25,27 14.75,34.5C14.02,35.5 12.98,35.5 12.25,34.5C6.75,27 0,19.22 0,13.5C0,6.04 6.04,0 13.5,0C20.96,0 27,6.04 27,13.5Z"></path><path opacity="0.25" d="M13.5,0C6.04,0 0,6.04 0,13.5C0,19.22 6.75,27 12.25,34.5C13,35.52 14.02,35.5 14.75,34.5C20.25,27 27,19.07 27,13.5C27,6.04 20.96,0 13.5,0ZM13.5,1C20.42,1 26,6.58 26,13.5C26,15.9 24.5,19.18 22.22,22.74C19.95,26.3 16.71,30.14 13.94,33.91C13.74,34.18 13.61,34.32 13.5,34.44C13.39,34.32 13.26,34.18 13.06,33.91C10.28,30.13 7.41,26.31 5.02,22.77C2.62,19.23 1,15.95 1,13.5C1,6.58 6.58,1 13.5,1Z"></path><circle fill="white" cx="13.5" cy="13.5" r="5.5"></circle></svg></div><div aria-label="Map marker" class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(451px, 236px) translate(-50%, -50%) translate(0px, -14px);"><svg display="block" height="41px" width="27px" viewBox="0 0 27 41"><defs><radialGradient id="shadowGradient"><stop offset="10%" stop-opacity="0.4"></stop><stop offset="100%" stop-opacity="0.05"></stop></radialGradient></defs><ellipse cx="13.5" cy="34.8" rx="10.5" ry="5.25" fill="url(#shadowGradient)"></ellipse><path fill="red" d="M27,13.5C27,19.07 20.25,27 14.75,34.5C14.02,35.5 12.98,35.5 12.25,34.5C6.75,27 0,19.22 0,13.5C0,6.04 6.04,0 13.5,0C20.96,0 27,6.04 27,13.5Z"></path><path opacity="0.25" d="M13.5,0C6.04,0 0,6.04 0,13.5C0,19.22 6.75,27 12.25,34.5C13,35.52 14.02,35.5 14.75,34.5C20.25,27 27,19.07 27,13.5C27,6.04 20.96,0 13.5,0ZM13.5,1C20.42,1 26,6.58 26,13.5C26,15.9 24.5,19.18 22.22,22.74C19.95,26.3 16.71,30.14 13.94,33.91C13.74,34.18 13.61,34.32 13.5,34.44C13.39,34.32 13.26,34.18 13.06,33.91C10.28,30.13 7.41,26.31 5.02,22.77C2.62,19.23 1,15.95 1,13.5C1,6.58 6.58,1 13.5,1Z"></path><circle fill="white" cx="13.5" cy="13.5" r="5.5"></circle></svg></div><div aria-label="Map marker" class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(522px, 231px) translate(-50%, -50%) translate(0px, -14px);"><svg display="block" height="41px" width="27px" viewBox="0 0 27 41"><defs><radialGradient id="shadowGradient"><stop offset="10%" stop-opacity="0.4"></stop><stop offset="100%" stop-opacity="0.05"></stop></radialGradient></defs><ellipse cx="13.5" cy="34.8" rx="10.5" ry="5.25" fill="url(#shadowGradient)"></ellipse><path fill="red" d="M27,13.5C27,19.07 20.25,27 14.75,34.5C14.02,35.5 12.98,35.5 12.25,34.5C6.75,27 0,19.22 0,13.5C0,6.04 6.04,0 13.5,0C20.96,0 27,6.04 27,13.5Z"></path><path opacity="0.25" d="M13.5,0C6.04,0 0,6.04 0,13.5C0,19.22 6.75,27 12.25,34.5C13,35.52 14.02,35.5 14.75,34.5C20.25,27 27,19.07 27,13.5C27,6.04 20.96,0 13.5,0ZM13.5,1C20.42,1 26,6.58 26,13.5C26,15.9 24.5,19.18 22.22,22.74C19.95,26.3 16.71,30.14 13.94,33.91C13.74,34.18 13.61,34.32 13.5,34.44C13.39,34.32 13.26,34.18 13.06,33.91C10.28,30.13 7.41,26.31 5.02,22.77C2.62,19.23 1,15.95 1,13.5C1,6.58 6.58,1 13.5,1Z"></path><circle fill="white" cx="13.5" cy="13.5" r="5.5"></circle></svg></div><div aria-label="Map marker" class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(608px, 245px) translate(-50%, -50%) translate(0px, -14px);"><svg display="block" height="41px" width="27px" viewBox="0 0 27 41"><defs><radialGradient id="shadowGradient"><stop offset="10%" stop-opacity="0.4"></stop><stop offset="100%" stop-opacity="0.05"></stop></radialGradient></defs><ellipse cx="13.5" cy="34.8" rx="10.5" ry="5.25" fill="url(#shadowGradient)"></ellipse><path fill="red" d="M27,13.5C27,19.07 20.25,27 14.75,34.5C14.02,35.5 12.98,35.5 12.25,34.5C6.75,27 0,19.22 0,13.5C0,6.04 6.04,0 13.5,0C20.96,0 27,6.04 27,13.5Z"></path><path opacity="0.25" d="M13.5,0C6.04,0 0,6.04 0,13.5C0,19.22 6.75,27 12.25,34.5C13,35.52 14.02,35.5 14.75,34.5C20.25,27 27,19.07 27,13.5C27,6.04 20.96,0 13.5,0ZM13.5,1C20.42,1 26,6.58 26,13.5C26,15.9 24.5,19.18 22.22,22.74C19.95,26.3 16.71,30.14 13.94,33.91C13.74,34.18 13.61,34.32 13.5,34.44C13.39,34.32 13.26,34.18 13.06,33.91C10.28,30.13 7.41,26.31 5.02,22.77C2.62,19.23 1,15.95 1,13.5C1,6.58 6.58,1 13.5,1Z"></path><circle fill="white" cx="13.5" cy="13.5" r="5.5"></circle></svg></div><div aria-label="Map marker" class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(570px, 358px) translate(-50%, -50%) translate(0px, -14px);"><svg display="block" height="41px" width="27px" viewBox="0 0 27 41"><defs><radialGradient id="shadowGradient"><stop offset="10%" stop-opacity="0.4"></stop><stop offset="100%" stop-opacity="0.05"></stop></radialGradient></defs><ellipse cx="13.5" cy="34.8" rx="10.5" ry="5.25" fill="url(#shadowGradient)"></ellipse><path fill="red" d="M27,13.5C27,19.07 20.25,27 14.75,34.5C14.02,35.5 12.98,35.5 12.25,34.5C6.75,27 0,19.22 0,13.5C0,6.04 6.04,0 13.5,0C20.96,0 27,6.04 27,13.5Z"></path><path opacity="0.25" d="M13.5,0C6.04,0 0,6.04 0,13.5C0,19.22 6.75,27 12.25,34.5C13,35.52 14.02,35.5 14.75,34.5C20.25,27 27,19.07 27,13.5C27,6.04 20.96,0 13.5,0ZM13.5,1C20.42,1 26,6.58 26,13.5C26,15.9 24.5,19.18 22.22,22.74C19.95,26.3 16.71,30.14 13.94,33.91C13.74,34.18 13.61,34.32 13.5,34.44C13.39,34.32 13.26,34.18 13.06,33.91C10.28,30.13 7.41,26.31 5.02,22.77C2.62,19.23 1,15.95 1,13.5C1,6.58 6.58,1 13.5,1Z"></path><circle fill="white" cx="13.5" cy="13.5" r="5.5"></circle></svg></div><div aria-label="Map marker" class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(498px, 329px) translate(-50%, -50%) translate(0px, -14px);"><svg display="block" height="41px" width="27px" viewBox="0 0 27 41"><defs><radialGradient id="shadowGradient"><stop offset="10%" stop-opacity="0.4"></stop><stop offset="100%" stop-opacity="0.05"></stop></radialGradient></defs><ellipse cx="13.5" cy="34.8" rx="10.5" ry="5.25" fill="url(#shadowGradient)"></ellipse><path fill="red" d="M27,13.5C27,19.07 20.25,27 14.75,34.5C14.02,35.5 12.98,35.5 12.25,34.5C6.75,27 0,19.22 0,13.5C0,6.04 6.04,0 13.5,0C20.96,0 27,6.04 27,13.5Z"></path><path opacity="0.25" d="M13.5,0C6.04,0 0,6.04 0,13.5C0,19.22 6.75,27 12.25,34.5C13,35.52 14.02,35.5 14.75,34.5C20.25,27 27,19.07 27,13.5C27,6.04 20.96,0 13.5,0ZM13.5,1C20.42,1 26,6.58 26,13.5C26,15.9 24.5,19.18 22.22,22.74C19.95,26.3 16.71,30.14 13.94,33.91C13.74,34.18 13.61,34.32 13.5,34.44C13.39,34.32 13.26,34.18 13.06,33.91C10.28,30.13 7.41,26.31 5.02,22.77C2.62,19.23 1,15.95 1,13.5C1,6.58 6.58,1 13.5,1Z"></path><circle fill="white" cx="13.5" cy="13.5" r="5.5"></circle></svg></div><div aria-label="Map marker" class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(570px, 283px) translate(-50%, -50%) translate(0px, -14px);"><svg display="block" height="41px" width="27px" viewBox="0 0 27 41"><defs><radialGradient id="shadowGradient"><stop offset="10%" stop-opacity="0.4"></stop><stop offset="100%" stop-opacity="0.05"></stop></radialGradient></defs><ellipse cx="13.5" cy="34.8" rx="10.5" ry="5.25" fill="url(#shadowGradient)"></ellipse><path fill="red" d="M27,13.5C27,19.07 20.25,27 14.75,34.5C14.02,35.5 12.98,35.5 12.25,34.5C6.75,27 0,19.22 0,13.5C0,6.04 6.04,0 13.5,0C20.96,0 27,6.04 27,13.5Z"></path><path opacity="0.25" d="M13.5,0C6.04,0 0,6.04 0,13.5C0,19.22 6.75,27 12.25,34.5C13,35.52 14.02,35.5 14.75,34.5C20.25,27 27,19.07 27,13.5C27,6.04 20.96,0 13.5,0ZM13.5,1C20.42,1 26,6.58 26,13.5C26,15.9 24.5,19.18 22.22,22.74C19.95,26.3 16.71,30.14 13.94,33.91C13.74,34.18 13.61,34.32 13.5,34.44C13.39,34.32 13.26,34.18 13.06,33.91C10.28,30.13 7.41,26.31 5.02,22.77C2.62,19.23 1,15.95 1,13.5C1,6.58 6.58,1 13.5,1Z"></path><circle fill="white" cx="13.5" cy="13.5" r="5.5"></circle></svg></div><div aria-label="Map marker" class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(371px, 304px) translate(-50%, -50%) translate(0px, -14px);"><svg display="block" height="41px" width="27px" viewBox="0 0 27 41"><defs><radialGradient id="shadowGradient"><stop offset="10%" stop-opacity="0.4"></stop><stop offset="100%" stop-opacity="0.05"></stop></radialGradient></defs><ellipse cx="13.5" cy="34.8" rx="10.5" ry="5.25" fill="url(#shadowGradient)"></ellipse><path fill="red" d="M27,13.5C27,19.07 20.25,27 14.75,34.5C14.02,35.5 12.98,35.5 12.25,34.5C6.75,27 0,19.22 0,13.5C0,6.04 6.04,0 13.5,0C20.96,0 27,6.04 27,13.5Z"></path><path opacity="0.25" d="M13.5,0C6.04,0 0,6.04 0,13.5C0,19.22 6.75,27 12.25,34.5C13,35.52 14.02,35.5 14.75,34.5C20.25,27 27,19.07 27,13.5C27,6.04 20.96,0 13.5,0ZM13.5,1C20.42,1 26,6.58 26,13.5C26,15.9 24.5,19.18 22.22,22.74C19.95,26.3 16.71,30.14 13.94,33.91C13.74,34.18 13.61,34.32 13.5,34.44C13.39,34.32 13.26,34.18 13.06,33.91C10.28,30.13 7.41,26.31 5.02,22.77C2.62,19.23 1,15.95 1,13.5C1,6.58 6.58,1 13.5,1Z"></path><circle fill="white" cx="13.5" cy="13.5" r="5.5"></circle></svg></div><div aria-label="Map marker" class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(351px, 292px) translate(-50%, -50%) translate(0px, -14px);"><svg display="block" height="41px" width="27px" viewBox="0 0 27 41"><defs><radialGradient id="shadowGradient"><stop offset="10%" stop-opacity="0.4"></stop><stop offset="100%" stop-opacity="0.05"></stop></radialGradient></defs><ellipse cx="13.5" cy="34.8" rx="10.5" ry="5.25" fill="url(#shadowGradient)"></ellipse><path fill="red" d="M27,13.5C27,19.07 20.25,27 14.75,34.5C14.02,35.5 12.98,35.5 12.25,34.5C6.75,27 0,19.22 0,13.5C0,6.04 6.04,0 13.5,0C20.96,0 27,6.04 27,13.5Z"></path><path opacity="0.25" d="M13.5,0C6.04,0 0,6.04 0,13.5C0,19.22 6.75,27 12.25,34.5C13,35.52 14.02,35.5 14.75,34.5C20.25,27 27,19.07 27,13.5C27,6.04 20.96,0 13.5,0ZM13.5,1C20.42,1 26,6.58 26,13.5C26,15.9 24.5,19.18 22.22,22.74C19.95,26.3 16.71,30.14 13.94,33.91C13.74,34.18 13.61,34.32 13.5,34.44C13.39,34.32 13.26,34.18 13.06,33.91C10.28,30.13 7.41,26.31 5.02,22.77C2.62,19.23 1,15.95 1,13.5C1,6.58 6.58,1 13.5,1Z"></path><circle fill="white" cx="13.5" cy="13.5" r="5.5"></circle></svg></div><div aria-label="Map marker" class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(295px, 405px) translate(-50%, -50%) translate(0px, -14px);"><svg display="block" height="41px" width="27px" viewBox="0 0 27 41"><defs><radialGradient id="shadowGradient"><stop offset="10%" stop-opacity="0.4"></stop><stop offset="100%" stop-opacity="0.05"></stop></radialGradient></defs><ellipse cx="13.5" cy="34.8" rx="10.5" ry="5.25" fill="url(#shadowGradient)"></ellipse><path fill="red" d="M27,13.5C27,19.07 20.25,27 14.75,34.5C14.02,35.5 12.98,35.5 12.25,34.5C6.75,27 0,19.22 0,13.5C0,6.04 6.04,0 13.5,0C20.96,0 27,6.04 27,13.5Z"></path><path opacity="0.25" d="M13.5,0C6.04,0 0,6.04 0,13.5C0,19.22 6.75,27 12.25,34.5C13,35.52 14.02,35.5 14.75,34.5C20.25,27 27,19.07 27,13.5C27,6.04 20.96,0 13.5,0ZM13.5,1C20.42,1 26,6.58 26,13.5C26,15.9 24.5,19.18 22.22,22.74C19.95,26.3 16.71,30.14 13.94,33.91C13.74,34.18 13.61,34.32 13.5,34.44C13.39,34.32 13.26,34.18 13.06,33.91C10.28,30.13 7.41,26.31 5.02,22.77C2.62,19.23 1,15.95 1,13.5C1,6.58 6.58,1 13.5,1Z"></path><circle fill="white" cx="13.5" cy="13.5" r="5.5"></circle></svg></div><div aria-label="Map marker" class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(265px, 381px) translate(-50%, -50%) translate(0px, -14px);"><svg display="block" height="41px" width="27px" viewBox="0 0 27 41"><defs><radialGradient id="shadowGradient"><stop offset="10%" stop-opacity="0.4"></stop><stop offset="100%" stop-opacity="0.05"></stop></radialGradient></defs><ellipse cx="13.5" cy="34.8" rx="10.5" ry="5.25" fill="url(#shadowGradient)"></ellipse><path fill="red" d="M27,13.5C27,19.07 20.25,27 14.75,34.5C14.02,35.5 12.98,35.5 12.25,34.5C6.75,27 0,19.22 0,13.5C0,6.04 6.04,0 13.5,0C20.96,0 27,6.04 27,13.5Z"></path><path opacity="0.25" d="M13.5,0C6.04,0 0,6.04 0,13.5C0,19.22 6.75,27 12.25,34.5C13,35.52 14.02,35.5 14.75,34.5C20.25,27 27,19.07 27,13.5C27,6.04 20.96,0 13.5,0ZM13.5,1C20.42,1 26,6.58 26,13.5C26,15.9 24.5,19.18 22.22,22.74C19.95,26.3 16.71,30.14 13.94,33.91C13.74,34.18 13.61,34.32 13.5,34.44C13.39,34.32 13.26,34.18 13.06,33.91C10.28,30.13 7.41,26.31 5.02,22.77C2.62,19.23 1,15.95 1,13.5C1,6.58 6.58,1 13.5,1Z"></path><circle fill="white" cx="13.5" cy="13.5" r="5.5"></circle></svg></div><div aria-label="Map marker" class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(379px, 116px) translate(-50%, -50%) translate(0px, -14px);"><svg display="block" height="41px" width="27px" viewBox="0 0 27 41"><defs><radialGradient id="shadowGradient"><stop offset="10%" stop-opacity="0.4"></stop><stop offset="100%" stop-opacity="0.05"></stop></radialGradient></defs><ellipse cx="13.5" cy="34.8" rx="10.5" ry="5.25" fill="url(#shadowGradient)"></ellipse><path fill="red" d="M27,13.5C27,19.07 20.25,27 14.75,34.5C14.02,35.5 12.98,35.5 12.25,34.5C6.75,27 0,19.22 0,13.5C0,6.04 6.04,0 13.5,0C20.96,0 27,6.04 27,13.5Z"></path><path opacity="0.25" d="M13.5,0C6.04,0 0,6.04 0,13.5C0,19.22 6.75,27 12.25,34.5C13,35.52 14.02,35.5 14.75,34.5C20.25,27 27,19.07 27,13.5C27,6.04 20.96,0 13.5,0ZM13.5,1C20.42,1 26,6.58 26,13.5C26,15.9 24.5,19.18 22.22,22.74C19.95,26.3 16.71,30.14 13.94,33.91C13.74,34.18 13.61,34.32 13.5,34.44C13.39,34.32 13.26,34.18 13.06,33.91C10.28,30.13 7.41,26.31 5.02,22.77C2.62,19.23 1,15.95 1,13.5C1,6.58 6.58,1 13.5,1Z"></path><circle fill="white" cx="13.5" cy="13.5" r="5.5"></circle></svg></div></div><div class="mapboxgl-control-container"><div class="mapboxgl-ctrl-top-left"></div><div class="mapboxgl-ctrl-top-right"><div class="mapboxgl-ctrl mapboxgl-ctrl-group"><button class="mapboxgl-ctrl-zoom-in" type="button" aria-label="Zoom in" aria-disabled="false"><span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Zoom in"></span></button><button class="mapboxgl-ctrl-zoom-out" type="button" aria-label="Zoom out" aria-disabled="false"><span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Zoom out"></span></button><button class="mapboxgl-ctrl-compass" type="button" aria-label="Reset bearing to north"><span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Reset bearing to north" style="transform: rotate(0deg);"></span></button></div><div class="mapboxgl-ctrl mapboxgl-ctrl-group"><button class="mapboxgl-ctrl-fullscreen" type="button" aria-label="Enter fullscreen"><span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Enter fullscreen"></span></button></div><div class="mapboxgl-ctrl mapboxgl-ctrl-group"><button class="mapboxgl-ctrl-geolocate" type="button" aria-label="Find my location" aria-pressed="false"><span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Find my location"></span></button></div></div><div class="mapboxgl-ctrl-bottom-left"><div class="mapboxgl-ctrl" style="display: block;"><a class="mapboxgl-ctrl-logo" target="_blank" rel="noopener nofollow" href="https://www.mapbox.com/" aria-label="Mapbox logo"></a></div></div><div class="mapboxgl-ctrl-bottom-right"><div class="mapboxgl-ctrl mapboxgl-ctrl-attrib"><button class="mapboxgl-ctrl-attrib-button" type="button" aria-label="Toggle attribution"><span class="mapboxgl-ctrl-icon" aria-hidden="true" title="Toggle attribution"></span></button><div class="mapboxgl-ctrl-attrib-inner" role="list"><a href="https://www.mapbox.com/about/maps/" target="_blank" title="Mapbox" aria-label="Mapbox">© Mapbox</a> <a href="https://www.openstreetmap.org/about/" target="_blank" title="OpenStreetMap" aria-label="OpenStreetMap">© OpenStreetMap</a> <a class="mapbox-improve-map" href="https://apps.mapbox.com/feedback/?owner=mapbox&amp;id=streets-v9&amp;access_token=pk.eyJ1IjoidW8yOTU1MjYiLCJhIjoiY20zdnFucmJjMHF6cTJqcGNxaDF6M25kMSJ9.YuYth_GgIKyI-rtcdvauSQ#/4.54306/52.38928/14.08" target="_blank" aria-label="Map feedback" rel="noopener nofollow">Improve this map</a></div></div></div></div></div>
+    </section>
+
+    <!--aqui-->
+
+
+    </main>
+
+    <!-- REVISAR -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
+    <script>
+        var circuito = new Circuito();
+    </script><p>Este navegador soporta el API File</p>
+
+
+</body></html>

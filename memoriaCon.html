@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="es"><head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8">
+    <title>F1Desktop/Juegos</title>
+    <link href="multimedia/imagenes/favicon.ico" rel="icon">
+    <meta name="author" content="UO295526">
+    <meta name="description" content="Juegos: Memoria">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css">
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css"> <!--asi asociamos mas hojas de estilo-->
+    <link rel="stylesheet" type="text/css" href="estilo/memoria.css">
+
+    <script src="js/memoria.js"></script>
+</head>
+
+<body>
+    <header>        <!--No confundir con head. Head es parte intrinseca del html y header la seccion de arriba de la pagina-->
+        <h1><a href="index.html" title="enlace al indice">F1Desktop</a></h1>
+        <nav>
+            <a href="index.html" title="enlace al indice">Index</a>  <!--importante el title por usabilidad-->
+            <a href="piloto.html" title="enlace a la pagina del piloto">Piloto</a> <!--lo "activamos" pues es enlace a la propia pagina-->
+            <a href="noticias.html" title="enlace a la pagina de noticias">Noticias</a>
+            <a href="calendario.html" title="enlace a la pagina del calendario">Calendario</a>
+            <a href="meteorologia.html" title="enlace a la pagina de meteorologia">Meteorologia</a>
+            <a href="circuito.html" title="enlace a la pagina de circuito">Circuito</a>
+            <a href="viajes.php" title="enlace a la pagina de viajes">Viajes</a>
+            <a href="juegos.html" title="enlace a la pagina de juegos" class="active">Juegos</a>
+        </nav>
+        <!--este h1 y nav, al ser comun de todas las paginas, lo metemos en un header comun de todas-->
+      </header>
+
+    <p>Estás en: <a href="index.html" title="enlace al indice">Inicio</a> &gt;&gt; <a href="juegos.html" title="enlace a pagina juegos">Juegos</a> &gt;&gt; Memoria</p> <!--migas entre header y main, pues va a ser algo identico en el resto de html-->
+
+
+    <main>
+
+        <section>
+            <h2>Menú de juegos</h2>
+            <nav>
+                <a href="memoria.html" title="enlace al juego de memoria">Memoria</a>
+                <a href="semaforo.php" title="enlace al juego de velocidad">Semáforo</a>
+                <a href="api.html" title="enlace al juego de trivia">Trivia</a>
+                <a href="php/libre.php" title="enlace al compendio de F1">Compendio</a>
+            </nav>
+        </section>
+
+        <h2>Cómo Jugar</h2>
+        <p>Halla todas las parejas de escudería de fórmula 1. Levante un par de cartas (Pinchando sobre ellas) hasta lograr este objetivo.</p>
+        <p>Una vez levantado el par escogido, puede pasar:</p>
+        <ul>
+            <li>Acertar: Levantar una pareja de tarjetas. -&gt; La pareja se mantendrá levantada y podrás seguir jugando, al instante, con las demás tarjetas.</li>
+            <li>Fallar: Levantar dos tarjetas desiguales. -&gt; Deberá esperar a que se vuelvan a poner bocabajo para continuar.</li>
+        </ul>
+        <p>El tablero de juego se encuentra en la parte de abajo, disponible para jugar en cualquier momento.</p>
+        <p>Nota: Para reiniciar, recargar la página.</p>
+        <!-- <button>Jugar</button> -->
+
+        <section>
+            <h2>Juego de Memoria</h2>
+             
+            
+        <article data-element="AstonMartin"><h3>Tarjeta de Memoria</h3><img alt="AstonMartin" src="https://upload.wikimedia.org/wikipedia/fr/7/72/Aston_Martin_Aramco_Cognizant_F1.svg"></article><article data-element="McLaren"><h3>Tarjeta de Memoria</h3><img alt="McLaren" src="https://upload.wikimedia.org/wikipedia/en/6/66/McLaren_Racing_logo.svg"></article><article data-element="Mercedes"><h3>Tarjeta de Memoria</h3><img alt="Mercedes" src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Mercedes_AMG_Petronas_F1_Logo.svg"></article><article data-element="RedBull"><h3>Tarjeta de Memoria</h3><img alt="RedBull" src="https://upload.wikimedia.org/wikipedia/de/c/c4/Red_Bull_Racing_logo.svg"></article><article data-element="Ferrari" data-state="revealed"><h3>Tarjeta de Memoria</h3><img alt="Ferrari" src="https://upload.wikimedia.org/wikipedia/de/c/c0/Scuderia_Ferrari_Logo.svg"></article><article data-element="Ferrari" data-state="revealed"><h3>Tarjeta de Memoria</h3><img alt="Ferrari" src="https://upload.wikimedia.org/wikipedia/de/c/c0/Scuderia_Ferrari_Logo.svg"></article><article data-element="Alpine"><h3>Tarjeta de Memoria</h3><img alt="Alpine" src="https://upload.wikimedia.org/wikipedia/fr/b/b7/Alpine_F1_Team_2021_Logo.svg"></article><article data-element="AstonMartin"><h3>Tarjeta de Memoria</h3><img alt="AstonMartin" src="https://upload.wikimedia.org/wikipedia/fr/7/72/Aston_Martin_Aramco_Cognizant_F1.svg"></article><article data-element="Mercedes"><h3>Tarjeta de Memoria</h3><img alt="Mercedes" src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Mercedes_AMG_Petronas_F1_Logo.svg"></article><article data-element="Alpine"><h3>Tarjeta de Memoria</h3><img alt="Alpine" src="https://upload.wikimedia.org/wikipedia/fr/b/b7/Alpine_F1_Team_2021_Logo.svg"></article><article data-element="RedBull"><h3>Tarjeta de Memoria</h3><img alt="RedBull" src="https://upload.wikimedia.org/wikipedia/de/c/c4/Red_Bull_Racing_logo.svg"></article><article data-element="McLaren"><h3>Tarjeta de Memoria</h3><img alt="McLaren" src="https://upload.wikimedia.org/wikipedia/en/6/66/McLaren_Racing_logo.svg"></article></section>
+
+    </main>
+
+    <script>
+        var juego = new Memoria();
+    </script>
+
+</body></html>
